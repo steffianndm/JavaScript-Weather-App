@@ -9,8 +9,8 @@
 </head>
 <body>
 
-<main class="container text-center flex flex-col lg:flex-row w-screen h-screen content-center justify-center mx-auto py-12 px-4" id="app">
- <div class="container mx-auto w-1/2 flex justify-between flex-wrap px-4"> 
+<main class="container text-center flex flex-col lg:flex-row w-screen h-screen lg:content-center justify-center mx-auto py-12 px-4" id="app">
+ <div class="container mx-auto w-1/2 flex justify-center content-center flex-wrap px-4"> 
   <form>
     <label class="container text-gray-500 flex mx-auto font-bold mb-2 text-center text-4xl" for="location-search">
       What do I drink today?
@@ -26,17 +26,12 @@
 
 <!-- Weather Temp -->
 
-<div class="container flex w-screen mx-auto text-center flex-row justify-center">
- <div class="container flex mx-auto text-gray-500 font-bold mb-2 text-center text-4xl">
-=======
+<div class="container content-center flex w-screen mx-auto text-center flex-row justify-center">
+ <div class="container content-center flex mx-auto text-gray-500 font-bold mb-2 text-center text-4xl">
 <div class="container w-1/2 flex md:content-center md:flex-wrap">
   <div class="container mx-auto">
  <div class="font-bold mt-4 text-center text-xl" id="weather" v-if="location">
      <p class="container flex flex-col mb-2 text-gray-500 text-center">
-<<<<<<< HEAD
->>>>>>> parent of a23ab99... Update index.html
-=======
->>>>>>> parent of a23ab99... Update index.html
      It's {{currentTemp}}° with {{description}} right now.
     </p>
 </div>
