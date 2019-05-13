@@ -9,11 +9,10 @@
 </head>
 <body>
 
-<main class="container text-center flex flex-col md:flex-row w-screen h-screen md:justify-between mx-auto py-12 px-4" id="app">
- <div class="container mx-auto w-1/2 flex content-center justify-between flex-wrap"> 
+<main class="container text-center flex flex-col lg:flex-row w-screen h-screen  lg:content-center justify-center mx-auto py-12 px-4" id="app">
+ <div class="container mx-auto w-1/2 flex justify-center content-center flex-wrap px-4"> 
   <form>
     <label class="container text-gray-500 flex mx-auto font-bold mb-2 text-center text-4xl" for="location-search">
-
       What do I drink today?
     </label>
     <div class="flex container items-center border-b border-b-2 border-teal-500 py-2 pt-5">
@@ -27,32 +26,49 @@
 
 <!-- Weather Temp -->
 
-<div class="container content-center flex w-screen mx-auto text-center flex-row lg:flex-col justify-center">
+<div class="container content-center mx-auto flex w-screen mx-auto text-center flex-row lg:flex-col justify-center">
 
  <div class="container mx-auto content-center flex mx-auto text-gray-500 font-bold mb-2 text-center text-4xl">
 
   <div class="container mx-auto">
 
  <div class="font-bold mt-4 text-center text-xl" id="weather" v-if="location">
-     <p class="container flex flex-col mb-2 text-gray-500 text-center">
+     <p class="container flex flex-col mb-2 text-gray-800 text-center">
      It's {{currentTemp}}° with {{description}} right now.
     </p>
 </div>
-<div class="font-bold mt-4 text-center text-xl" v-if="currentTemp">
+<div class="mt-4 text-center text-xl" v-if="currentTemp">
       <span v-if="currentTemp > 85">
-        <p class="text-center">You should drink a</p><p class="text-center text-green-500">Kiwi Margarita</p>
+        <p class="text-center">You should drink a</p><p class="text-center text-green-500">Kiwi Margarita.</p>
       </span>
 
       <span v-if="currentTemp < 85 && currentTemp > 75">
-       <p class="text-center">You should drink a</p><p class="text-center text-yellow-600">White Peachy Sangria</p>
+       <p class="text-center">You should drink a</p><p class="text-center text-yellow-600">White Peachy Sangria.</p>
       </span>
 
       <span v-if="currentTemp < 75 && currentTemp > 50">
-        <p class="text-center">You should drink a</p><p class="text-center text-red-800">Moscow Hot Chocolate</p>
+        <p class="text-center">You should drink a</p><p class="text-center text-red-800">Moscow Hot Chocolate.</p>
       </span>
 
       <span v-if="currentTemp < 50 && currentTemp > 0">
-      <p class="text-center">You should drink a</p><p class="text-center text-purple-400">White Chocolate Chai with Baileys</p>
+      <p class="text-center">You should drink a</p><p class="text-center text-purple-400 pb-12">White Chocolate Chai with Baileys.</p>
+             <div class="container mx-auto mt-15 px-20">
+              <img src="https://images.media-allrecipes.com/userphotos/720x405/6057323.jpg">
+              <p class="text-left text-sm text-gray-800 ">
+          Ingredients</p>
+            <ol class="text-left text-sm font-thin text-gray-600">
+              <li>2 cups whole milk</li>
+              <li>2/3 cup white chocolate chips</li>
+              <li>2 chai tea bags</li>
+              <li>1/2 cup Baileys Original Irish Cream</li>
+              <li>1 large marshmallow</li>
+              <li>Freshly ground black pepper, for topping</li>
+            </ol>
+          <p class="text-left text-sm text-gray-800">Directions</p>
+          <p class="text-left text-sm font-thin text-gray-600">In a small saucepan, heat the milk over medium heat until barely simmering. Add the chocolate and stir until melted. Remove from heat. Add the tea bags and let stand until infused, 4 to 5 minutes. Discard the tea bags.
+          Reheat the hot chocolate over medium heat until just simmering. Stir in the Baileys. Divide between 2 mugs. Top with marshmallows and pepper.
+        </p>
+      </div>
       </span>
     </div>
   </div>
