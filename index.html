@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.7.4/tailwind.min.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/tailwindcss@next/dist/tailwind.min.css">
 
   <title>JavaScript Weather App</title>
 </head>
 <body>
 
-<main class="container flex flex-row w-screen h-screen justify-between mx-auto py-12 px-4 " id="app">
- <div class="container flex content-center flex-wrap"> 
+<main class="container text-center flex flex-col md:flex-row w-screen h-screen md:justify-between mx-auto py-12 px-4" id="app">
+ <div class="container mx-auto w-1/2 flex content-center justify-between flex-wrap"> 
   <form>
-    <label class="flex font-bold mb-2 text-center text-4xl" for="location-search">
+    <label class="container text-yellow-600 flex mx-auto font-bold mb-2 text-center text-4xl" for="location-search">
       What do I drink today?
     </label>
     <div class="flex container items-center border-b border-b-2 border-teal-500 py-2 pt-5">
@@ -24,13 +24,14 @@
   </form>
 </div>
 
-<div class="container flex  content-center flex-wrap">
-  <div class="container mx-auto font-bold mt-4 text-center flex text-xl" id="weather" v-if="location">
-    <p class="mb-2">
+<div class="container w-1/2 flex md:content-center md:flex-wrap">
+  <div class="container mx-auto">
+  <div class="font-bold mt-4 text-center flex text-xl" id="weather" v-if="location">
+    <p class="mb-2 text-center">
      It's {{currentTemp}}° right now.
     </p>
   </div>
-  <div class="container  flex mt-4 text-center" v-if="currentTemp">
+  <div class="container flex mt-4 text-center" v-if="currentTemp">
     <p>
       <span v-if="currentTemp > 85">
         It's hot outside with {{description}}. 
@@ -46,6 +47,7 @@
       </span>
     </p>
   </div>
+</div>
 </div>
 </main>
 </body>

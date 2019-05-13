@@ -2,3 +2,7 @@
 	position: absolute;
 		left: -100000cm;
 }
+
+body {
+	background-image: linear-gradient(-90deg, #e6fffa, #fff5f7);
+}
