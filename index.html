@@ -12,7 +12,7 @@
 <main class="container text-center flex flex-col md:flex-row w-screen h-screen md:justify-between mx-auto py-12 px-4" id="app">
  <div class="container mx-auto w-1/2 flex content-center justify-between flex-wrap"> 
   <form>
-    <label class="container text-yellow-600 flex mx-auto font-bold mb-2 text-center text-4xl" for="location-search">
+    <label class="container text-gray-500 flex mx-auto font-bold mb-2 text-center text-4xl" for="location-search">
       What do I drink today?
     </label>
     <div class="flex container items-center border-b border-b-2 border-teal-500 py-2 pt-5">
@@ -26,26 +26,28 @@
 
 <div class="container w-1/2 flex md:content-center md:flex-wrap">
   <div class="container mx-auto">
-  <div class="font-bold mt-4 text-center flex text-xl" id="weather" v-if="location">
-    <p class="mb-2 text-center">
-     It's {{currentTemp}}° right now.
+ <div class="font-bold mt-4 text-center text-xl" id="weather" v-if="location">
+     <p class="container flex flex-col mb-2 text-gray-500 text-center">
+     It's {{currentTemp}}° with {{description}} right now.
     </p>
   </div>
-  <div class="container flex mt-4 text-center" v-if="currentTemp">
-    <p>
+
+<div class="mt-4 text-center" v-if="currentTemp">
       <span v-if="currentTemp > 85">
-        It's hot outside with {{description}}. 
+        <p class="text-center">You should drink a</p><p class="text-center text-green-500">Kiwi Margarita</p>
       </span>
-      <span v-if="currentTemp < 84 && currentTemp > 75">
-        It's warm outside with {{description}}.
+
+      <span v-if="currentTemp < 85 && currentTemp > 75">
+       <p class="text-center">You should drink a</p><p class="text-center text-yellow-600">White Peachy Sangria</p>
       </span>
-      <span v-if="currentTemp < 74 && currentTemp > 50">
-        It's chilly outside with {{description}}.
+
+      <span v-if="currentTemp < 75 && currentTemp > 50">
+        <p class="text-center">You should drink a</p><p class="text-center text-red-800">Moscow Hot Chocolate</p>
       </span>
-      <span v-if="currentTemp < 50">
-        It's cold outside with {{description}}.
+
+      <span v-if="currentTemp < 50 && currentTemp > 0">
+      <p class="text-center">You should drink a</p><p class="text-center text-purple-400">White Chocolate Chai with Baileys</p>
       </span>
-    </p>
   </div>
 </div>
 </div>
