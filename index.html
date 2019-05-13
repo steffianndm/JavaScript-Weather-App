@@ -15,7 +15,7 @@
     <label class="container text-gray-500 flex mx-auto font-bold mb-2 text-center text-4xl" for="location-search">
       What do I drink today?
     </label>
-    <div class="flex container items-center border-b border-b-2 border-teal-500 py-2 pt-5">
+    <div class="flex container items-center border-b border-b-2 border-gray-500 py-2 pt-5">
     <input class="appearance-none bg-transparent border-grey w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none text-center" type="text" placeholder="Enter Location" aria-label="Location" id="location-search" type="search" v-model="location">
     <button class="sr-only">
       Search
@@ -32,7 +32,7 @@
 
   <div class="container mx-auto">
 
- <div class="font-bold mt-4 text-center text-xl" id="weather" v-if="location">
+ <div class="mt-4 text-center text-xl" id="weather" v-if="location">
      <p class="container flex flex-col mb-2 text-gray-800 text-center">
      It's {{currentTemp}}° with {{description}} right now.
     </p>
@@ -83,20 +83,19 @@
       <span v-if="currentTemp < 75 && currentTemp > 50">
         <p class="text-center">You should drink a</p><p class="text-center text-red-800">Moscow Hot Chocolate.</p>
                    <div class="container mx-auto mt-15 px-20">
-              <img src="https://images.media-allrecipes.com/userphotos/720x405/6057323.jpg">
+              <img src="https://images.pexels.com/photos/1839882/pexels-photo-1839882.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=405&w=720" alt="A mug of hot chocolate">
               <p class="text-left text-sm text-gray-800 ">
           Ingredients</p>
             <ol class="text-left text-sm font-thin text-gray-600">
-              <li>2 cups whole milk</li>
-              <li>2/3 cup white chocolate chips</li>
-              <li>2 chai tea bags</li>
-              <li>1/2 cup Baileys Original Irish Cream</li>
-              <li>1 large marshmallow</li>
-              <li>Freshly ground black pepper, for topping</li>
+              <li> 1 fluid ounce vanilla flavored vodka</li>
+              <li>3/4 fluid ounce amaretto liqueur</li>
+              <li>1 tablespoon instant hot chocolate mix</li>
+              <li>4 fluid ounces hot milk</li>
             </ol>
+
           <p class="text-left text-sm text-gray-800">Directions</p>
-          <p class="text-left text-sm font-thin text-gray-600">In a small saucepan, heat the milk over medium heat until barely simmering. Add the chocolate and stir until melted. Remove from heat. Add the tea bags and let stand until infused, 4 to 5 minutes. Discard the tea bags.
-          Reheat the hot chocolate over medium heat until just simmering. Stir in the Baileys. Divide between 2 mugs. Top with marshmallows and pepper.
+          <p class="text-left text-sm font-thin text-gray-600">Into a coffee mug, pour in the vanilla vodka, amaretto, and add the hot chocolate mix. Pour in the hot milk and stir to blend well.
+
         </p>
       </div>
       </span>
@@ -104,7 +103,7 @@
       <span v-if="currentTemp < 50 && currentTemp > 0">
       <p class="text-center">You should drink a</p><p class="text-center text-purple-400 pb-12">White Chocolate Chai with Baileys.</p>
              <div class="container mx-auto mt-15 px-20">
-              <img src="https://images.media-allrecipes.com/userphotos/720x405/6057323.jpg">
+              <img src="https://images.pexels.com/photos/1624125/pexels-photo-1624125.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=405&w=720" alt="Photo of a Mug with marshmallows on top">
               <p class="text-left text-sm text-gray-800 ">
           Ingredients</p>
             <ol class="text-left text-sm font-thin text-gray-600">
