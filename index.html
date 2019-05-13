@@ -9,10 +9,11 @@
 </head>
 <body>
 
-<main class="container text-center flex flex-col lg:flex-row w-screen h-screen lg:content-center justify-center mx-auto py-12 px-4" id="app">
- <div class="container mx-auto w-1/2 flex justify-center content-center flex-wrap px-4"> 
+<main class="container text-center flex flex-col md:flex-row w-screen h-screen md:justify-between mx-auto py-12 px-4" id="app">
+ <div class="container mx-auto w-1/2 flex content-center justify-between flex-wrap"> 
   <form>
     <label class="container text-gray-500 flex mx-auto font-bold mb-2 text-center text-4xl" for="location-search">
+
       What do I drink today?
     </label>
     <div class="flex container items-center border-b border-b-2 border-teal-500 py-2 pt-5">
@@ -26,11 +27,9 @@
 
 <!-- Weather Temp -->
 
-<div class="container content-center flex w-screen mx-auto text-center flex-row justify-center">
+<div class="container content-center flex w-screen mx-auto text-center flex-row lg:flex-col justify-center">
 
  <div class="container mx-auto content-center flex mx-auto text-gray-500 font-bold mb-2 text-center text-4xl">
-
-<div class="container w-1/2 flex md:content-center md:flex-wrap">
 
   <div class="container mx-auto">
 
@@ -39,7 +38,7 @@
      It's {{currentTemp}}° with {{description}} right now.
     </p>
 </div>
-<div class="flex container mt-4 text-center mx-auto" v-if="currentTemp">
+<div class="font-bold mt-4 text-center text-xl" v-if="currentTemp">
       <span v-if="currentTemp > 85">
         <p class="text-center">You should drink a</p><p class="text-center text-green-500">Kiwi Margarita</p>
       </span>
@@ -57,7 +56,6 @@
       </span>
     </div>
   </div>
-</div>
 </div>
 </div>
 </main>
