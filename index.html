@@ -15,7 +15,7 @@
     <label class="container text-gray-500 flex mx-auto font-bold mb-2 text-center text-4xl" for="location-search">
       What do I drink today?
     </label>
-    <div class="flex container items-center border-b border-b-2 border-grey-500 py-2 pt-5">
+    <div class="flex container items-center border-b border-b-2 border-teal-500 py-2 pt-5">
     <input class="appearance-none bg-transparent border-grey w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none text-center" type="text" placeholder="Enter Location" aria-label="Location" id="location-search" type="search" v-model="location">
     <button class="sr-only">
       Search
@@ -24,28 +24,35 @@
   </form>
 </div>
 
+<<<<<<< HEAD
 <!-- Weather Temp -->
 
 <div class="container flex w-screen mx-auto text-center flex-row justify-center">
  <div class="container flex mx-auto text-gray-500 font-bold mb-2 text-center text-4xl">
+=======
+<div class="container w-1/2 flex md:content-center md:flex-wrap">
+  <div class="container mx-auto">
+ <div class="font-bold mt-4 text-center text-xl" id="weather" v-if="location">
+     <p class="container flex flex-col mb-2 text-gray-500 text-center">
+>>>>>>> parent of a23ab99... Update index.html
      It's {{currentTemp}}° with {{description}} right now.
     </p>
 </div>
 <div class="flex container mt-4 text-center mx-auto" v-if="currentTemp">
       <span v-if="currentTemp > 85">
-        <p class="text-center">You should drink a</p><p class="text-center text-green-500 text-xl">Kiwi Margarita</p>
+        <p class="text-center">You should drink a</p><p class="text-center text-green-500">Kiwi Margarita</p>
       </span>
 
       <span v-if="currentTemp < 85 && currentTemp > 75">
-       <p class="text-center">You should drink a</p><p class="text-center text-yellow-600 text-xl">White Peachy Sangria</p>
+       <p class="text-center">You should drink a</p><p class="text-center text-yellow-600">White Peachy Sangria</p>
       </span>
 
       <span v-if="currentTemp < 75 && currentTemp > 50">
-        <p class="text-center">You should drink a</p><p class="text-center text-red-800 text-xl">Moscow Hot Chocolate</p>
+        <p class="text-center">You should drink a</p><p class="text-center text-red-800">Moscow Hot Chocolate</p>
       </span>
 
       <span v-if="currentTemp < 50 && currentTemp > 0">
-      <p class="text-center">You should drink a</p><p class="text-center text-purple-400 text-xl">White Chocolate Chai with Baileys</p>
+      <p class="text-center">You should drink a</p><p class="text-center text-purple-400">White Chocolate Chai with Baileys</p>
       </span>
     </div>
   </div>
