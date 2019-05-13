@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="script" type="text/js" href="java.js">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.7.4/tailwind.min.css">
+
+  <title>JavaScript Weather App</title>
+</head>
+<body>
+
+<main class="container mx-auto py-12 px-4" id="app">
+
+  <form>
+    <label class="block font-bold mb-2 text-center text-2xl" for="location-search">
+      Location
+    </label>
+    <input class="block border-2 border-grey font-bold mx-auto p-2 rounded shadow-inner" id="location-search" type="search" v-model="location">
+    <button class="sr-only">
+      Search
+    </button>
+  </form>
+
+  <div class="font-bold mt-4 text-center text-xl" id="weather" v-if="location">
+    <p class="mb-2">
+      {{currentTemp}}°
+    </p>
+    <p>
+      Humidity: {{humidity}}
+    </p>
+    <p>
+      Min: {{minTemp}}&deg;<br>
+      Max: {{maxTemp}}&deg;
+    </p>
+  </div>
+  <div class="mt-4 text-center" v-if="currentTemp">
+    <p>
+      <span v-if="currentTemp > 85">
+        It's hot outside with {{description}}. 
+         <br> <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/fire_1f525.png">
+      </span>
+      <span v-if="currentTemp < 84 && currentTemp > 75">
+        It's warm outside with {{description}}.
+        <br><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/palm-tree_1f334.png">
+      </span>
+      <span v-if="currentTemp < 74 && currentTemp > 50">
+        It's chilly outside with {{description}}.
+        <br><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/hot-beverage_2615.png">
+      </span>
+      <span v-if="currentTemp < 50">
+        It's cold outside with {{description}}.
+        <br><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/freezing-face_1f976.png">
+      </span>
+    </p>
+  </div>
+</main>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+</html>
